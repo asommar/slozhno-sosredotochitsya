@@ -2,4 +2,102 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--main-text-color);
+
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 2fr 1fr 2fr;
+  align-items: center;
+  background-image: url(../images/cover-image-dark.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px;
+  height: 100vh;
+}
+
+.header__decoration {
+  position: absolute;
+  top: 10px;
+  right: 19px;
+  color: var(--accent-color);
+  line-height: 25px;
+}
+
+.header__decoration::after {
+  content: '';
+  background-color: var(--accent-color);
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-inline-start: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px currentColor;
+}
+
+.decorated-zone::before {
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: var(--accent-color);
+  width: 25px;
+  height: 25px;
+  border-block-start: 1px solid currentColor;
+  border-inline-end: 1px solid currentColor;
+}
+
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  color: var(--accent-color);
+  width: 25px;
+  height: 25px;
+  border-block-end: 1px solid currentColor;
+  border-inline-start: 1px solid currentColor;
+}
+
+.header__theme-menu {
+  justify-self: end;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  text-transform: lowercase;
+  color: var(--accent-color);
+  background-color: transparent;
+  width: 70px;
+  height: 26px;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid currentColor;
+}
+
+.header__main-header {
+  font-size: 116px;
+  font-weight: 700;
+  line-height: 95.7px;
+  color: #DB00FF;
+  text-shadow: 4px 4px var(--accent-color);
+}
+
+.header__subtitle {
+  color: #000028;
+  background-color: var(--accent-color);
+  font-weight: 700;
+  line-height: 23.4px;
+  white-space: pre-line;
 }
