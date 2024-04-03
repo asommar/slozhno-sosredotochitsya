@@ -1,24 +1,26 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  color: var(--main-text-color);
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   font-family: var(--main-font);
-  font-size: 18px;
   font-weight: 400;
-  color: var(--main-text-color);
-
+  font-size: 18px;
+  line-height: 23.4px;
+  background-image: url(../images/cover-image-dark.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .header {
+  padding: 10px;
   display: grid;
   grid-template-rows: 2fr 1fr 2fr;
   align-items: center;
-  background-image: url(../images/cover-image-dark.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 10px;
   height: 100vh;
+  min-height: 668px;
 }
 
 .header__decoration {
@@ -31,37 +33,39 @@
 
 .header__decoration::after {
   content: '';
-  background-color: var(--accent-color);
   display: inline-block;
   width: 9px;
   height: 9px;
   margin-inline-start: 10px;
   border-radius: 50%;
   box-shadow: 0 0 4px 2px currentColor;
+  background-color: var(--accent-color);
 }
 
-.decorated-zone::before {
+.decorated-zone::before,
+footer::before {
   content: '';
   position: absolute;
-  right: 10px;
   top: 10px;
-  color: var(--accent-color);
+  right: 10px;
   width: 25px;
   height: 25px;
-  border-block-start: 1px solid currentColor;
   border-inline-end: 1px solid currentColor;
+  border-block-start: 1px solid currentColor;
+  color: var(--accent-color);
 }
 
-.decorated-zone::after {
+.decorated-zone::after,
+footer::after {
   content: '';
   position: absolute;
-  left: 10px;
   bottom: 10px;
-  color: var(--accent-color);
+  left: 10px;
   width: 25px;
   height: 25px;
-  border-block-end: 1px solid currentColor;
   border-inline-start: 1px solid currentColor;
+  border-block-end: 1px solid currentColor;
+  color: var(--accent-color);
 }
 
 .header__theme-menu {
@@ -75,29 +79,74 @@
 }
 
 .header__theme-menu-button {
-  text-transform: lowercase;
-  color: var(--accent-color);
-  background-color: transparent;
   width: 70px;
   height: 26px;
+  color: var(--accent-color);
+  text-transform: lowercase;
+  background-color: transparent;
 }
 
 .header__theme-menu-button_active {
   border: 1px solid currentColor;
 }
 
-.header__main-header {
-  font-size: 116px;
+.header__main-title {
+  color: var(--main-title-color);
   font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 95.7px;
-  color: #DB00FF;
   text-shadow: 4px 4px var(--accent-color);
 }
 
 .header__subtitle {
-  color: #000028;
-  background-color: var(--accent-color);
-  font-weight: 700;
-  line-height: 23.4px;
   white-space: pre-line;
+}
+
+.title-decor {
+  color: #000028;
+  font-weight: 700;
+  background-color: var(--accent-color);
+}
+
+.text-aside {
+  padding: 40px 10px 10px;
+}
+
+.section-header {
+  color: var(--accent-color);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.paragraph-header {
+  margin: 20px 0 10px;
+}
+
+.advice-title {
+  font-weight: 400;
+  margin: 20px 0 10px;
+}
+
+.gallery {
+  padding: 40px 10px;
+  display: grid;
+  gap: 10px;
+}
+
+.gallery-image {
+  width: 100%;
+}
+
+.footer {
+  display: grid;
+  position: relative;
+  padding: 14px;
+  align-items: center;
+  height: 100vh;
+  min-height: 668px;
+  color: var(--main-title-color);
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 95.7px;
+  text-shadow: 2px 2px var(--accent-color);
 }

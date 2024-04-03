@@ -4,9 +4,36 @@
   переключая тему
 */
 
+:root.theme-light {
+  /* Переменные светлой темы */ 
+  --main-text-color: #353430;
+  --accent-color: #FF8DCB;
+  --background-color: #FFF1F7;
+  --main-font: 'IBM Plex mono', monospace;
+  --main-title-color: #FFC2E6;   
+}
+
+/* Остальные стили */
+
+@media (prefers-color-scheme: light) {
+:root {
+      /* Дублируем переменные светлой темы */ 
+      --main-text-color: #353430;
+      --accent-color: #FF8DCB;
+      --background-color: #FFF1F7;
+      --main-font: 'IBM Plex mono', monospace;
+      --main-title-color: #FFC2E6;
+  }
+}
+
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --main-text-color: #353430;
+  --accent-color: #FF8DCB;
+  --background-color: #FFF1F7;
+  --main-font: 'IBM Plex mono', monospace;
+  --main-title-color: #FFC2E6;
 }

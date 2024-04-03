@@ -3,8 +3,23 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+:root.theme-dark {
+  /* Дублируем переменные для тёмной темы */
+  --main-text-color: #F1B2CE;
+  --accent-color: #ff0070;
+  --background-color: #00183F;
+  --main-font: 'IBM Plex mono', monospace;
+  --main-title-color: #DB00FF;
+}
+
+/* Остальные стили */
 
 .page.theme_dark {
+  --main-text-color: #F1B2CE;
+  --accent-color: #ff0070;
+  --background-color: #00183F;
+  --main-font: 'IBM Plex mono', monospace;
+  --main-title-color: #DB00FF;
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
