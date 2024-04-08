@@ -8,4 +8,6 @@
   --background-color: #00183F;
   --main-font: 'IBM Plex mono', monospace;
   --main-title-color: #DB00FF;
+  --breakpoint-simulation-mobile: (100vw - 767px);
+  --edge-indent: clamp(10px, var(--breakpoint-simulation-mobile) * 1000, 20px);
 }
