@@ -5,9 +5,9 @@
 :root {
   --main-text-color: #F1B2CE;
   --accent-color: #ff0070;
-  --background-color: #00183F;
   --main-font: 'IBM Plex mono', monospace;
   --main-title-color: #DB00FF;
   --breakpoint-simulation-mobile: (100vw - 767px);
   --edge-indent: clamp(10px, var(--breakpoint-simulation-mobile) * 1000, 20px);
+  --border-button-color: rgba(255, 0, 112, 0.4);
 }

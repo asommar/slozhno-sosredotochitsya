@@ -8,9 +8,8 @@
   /* Переменные светлой темы */ 
   --main-text-color: #353430;
   --accent-color: #FF8DCB;
-  --background-color: #FFF1F7;
-  --main-font: 'IBM Plex mono', monospace;
   --main-title-color: #FFC2E6;   
+  --border-button-color: rgba(50, 49, 45, 0.4);
 }
 
 /* Остальные стили */
@@ -20,9 +19,8 @@
       /* Дублируем переменные светлой темы */ 
       --main-text-color: #353430;
       --accent-color: #FF8DCB;
-      --background-color: #FFF1F7;
-      --main-font: 'IBM Plex mono', monospace;
       --main-title-color: #FFC2E6;
+      --border-button-color: rgba(50, 49, 45, 0.4);
   }
 }
 
@@ -33,7 +31,18 @@
   */
   --main-text-color: #353430;
   --accent-color: #FF8DCB;
-  --background-color: #FFF1F7;
-  --main-font: 'IBM Plex mono', monospace;
   --main-title-color: #FFC2E6;
+  --border-button-color: rgba(50, 49, 45, 0.4);
+
+  background-image: url(../images/cover-image-light.png);
+
+  .header__decoration,
+  header__decoration::after{
+    display: none;
+  }
+
+  .decorated-zone::before,
+  .decorated-zone::after {
+  color: var(--main-text-color);
+  }
 }
